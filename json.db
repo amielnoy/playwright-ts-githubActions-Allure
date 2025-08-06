@@ -1,0 +1,153 @@
+{
+  "products": [
+    {
+      "productName": "Samsung Galaxy S21",
+      "price": 500,
+      "id": "61d0"
+    },
+    {
+      "productName": "iPhone 12",
+      "price": 600,
+      "Description": "The iPhone 12 is a powerful smartphone with a large screen and a high-resolution camera.",
+      "id": "2ef8"
+    },
+    {
+      "productName": "Google Pixel 5",
+      "price": 400,
+      "Description": "The Google Pixel 5 is a high-end smartphone with a large screen and a high-resolution camera.",
+      "id": "4904"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1ef0",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "d78b",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "7493",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "cee4",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "22b1",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "f51d",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "5ab6",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "9ee5",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "89e5",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "5c17",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "747c",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "5eca",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "8d76",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "55b6",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "6408",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "409a",
+      "productName": "",
+      "price": -100
+    },
+    {
+      "id": "b379",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "c5bc",
+      "productName": "",
+      "price": -100
+    },
+    {
+      "id": "5ce6",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "cbe6",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "1fe8",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    },
+    {
+      "id": "9f3d",
+      "productName": "Samsung Galaxy A55",
+      "price": 400,
+      "Description": "New galaxy A55"
+    }
+  ]
+}
