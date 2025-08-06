@@ -34,7 +34,7 @@ export async function navigateToWAFReportHistory(mainPage: MainPage, reportsPage
 }
 
 export async function downloadReport(mainPage: MainPage, wafReportsPage: WafReportsPage) {
-        const dateTimeUtility = new DateAndTimeUtility();
+        //const dateTimeUtility = new DateAndTimeUtility();
 
         await wafReportsPage.generateReportSubPage.csvButton.click();
         await mainPage.mainCymulateSubMenuPage.clickDownloadReportsButton();

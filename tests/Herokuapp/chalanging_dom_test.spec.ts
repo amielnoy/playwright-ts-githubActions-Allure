@@ -1,5 +1,4 @@
 import {expect, test} from '@playwright/test';
-import {EditPage} from "../../Pages/LetCodePages/LetCodeEditPage";
 import {ChalangingPage} from "../../Pages/LetCodePages/chalangingPage";
 
 test.describe('Chalanging Dom Tests', () => {
@@ -9,9 +8,17 @@ test.describe('Chalanging Dom Tests', () => {
   })
 
   test('clickMiddleButton', async ({ page }) => {
-    await chalangingPage.clickMiddleRedButton()
-    const currText =await chalangingPage.middleButton.innerText()
-    await expect(chalangingPage.middleButton).toHaveText("/bar|qux|baz/")
-  });
+    await chalangingPage.gotoHomePage();
 
+    await chalangingPage.clickMiddleRedButton()
+    await expect(chalangingPage.middleButton).toHaveText(new RegExp("bar|qux|baz|foo"))
+
+    await chalangingPage.clickUpperBlueButton()
+    await expect(chalangingPage.upperButton).toHaveText(new RegExp("bar|foo|baz|qux"))
+
+    await chalangingPage.clickBottomRedButton()
+    await expect(chalangingPage.bottomButton).toHaveText(new RegExp("bar|foo|baz|qux"))
+
+    await chalangingPage.getTableEdit(3).click()
+  });
 });

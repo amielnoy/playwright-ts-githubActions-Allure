@@ -2,6 +2,7 @@ import * as os from 'os'
 import * as util from 'util'
 import * as path from 'path'
 import * as fs from 'fs'
+// @ts-ignore
 import mime from 'mime-types'
 
 export function getDownloadFolderPath(): string {

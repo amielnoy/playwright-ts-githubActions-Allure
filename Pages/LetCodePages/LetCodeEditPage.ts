@@ -1,40 +1,56 @@
-import { expect } from "playwright/test";
+import { expect,Page } from "playwright/test";
+import {Locator} from "@playwright/test";
 
 // Page object for the Home Page
-export class HomePage {
-    readonly signupLoginButton;
-    readonly loggedInAsText;
-    readonly deleteAccountButton;
-    readonly accountDeletedText;
+export class EditPage {
+    readonly fullName:Locator;
+    readonly appendText:Locator;
+    readonly getMe:Locator;
+    readonly clearMe:Locator;
+    readonly noEdit:Locator;
+    readonly readOnly:Locator;
 
-    constructor(private page: any) {
-        this.signupLoginButton = this.page.locator('text=Signup / Login');
-        this.loggedInAsText = (userName: string) => this.page.locator(`text=Logged in as ${userName}`);
-        this.deleteAccountButton = this.page.locator('text=Delete Account');
-        this.accountDeletedText = this.page.locator('text=Account Deleted!');
+    readonly page: Page;
+
+    constructor( page: Page) {
+        this.page = page;
+        this.fullName = this.page.locator('#fullName');
+        this.appendText = this.page.locator('#join');
+        this.getMe = this.page.locator('#getMe');
+        this.clearMe = this.page.locator('#clearMe');
+        this.noEdit = this.page.locator('#noEdit');
+        this.readOnly = this.page.locator('#dontwrite');
     }
 
-    async navigateToHomePage() {
-        await this.page.goto('http://automationexercise.com');
+    async navigateToEditPage() {
+        await this.page.goto('https://letcode.in/edit',{timeout: 20000});
+        await expect(this.page.locator('text=Edit')).toBeVisible();
     }
 
-    async verifyHomePageVisible() {
-        await expect(this.page).toHaveTitle(/Automation Exercise/);
+    async setFullName(fullName: string) {
+        await this.fullName.fill(fullName)
     }
 
-    async clickSignupLogin() {
-        await this.signupLoginButton.click();
+    async appendTextAndPressTab(addedText:string) {
+        const currentText=await this.appendText.inputValue();
+        await this.appendText.fill(currentText+addedText);
+        await this.appendText.press('Tab')
     }
 
-    async verifyUserLoggedIn(userName: string) {
-        await expect(this.loggedInAsText(userName)).toBeVisible();
+    async getInputElement() {
+        return await this.getMe.inputValue();
     }
 
-    async deleteAccount() {
-        await this.deleteAccountButton.click();
+    async clearElement() {
+        await this.clearMe.clear({force:true});
     }
 
-    async verifyAccountDeleted() {
-        await expect(this.accountDeletedText).toBeVisible();
+    async isNoEditIsDisable() {
+        return await this.noEdit.isEnabled()
+    }
+
+    async isLastElementReadOnly() {
+        return await this.readOnly.isEditable()
     }
 }
+
